@@ -14,6 +14,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       # Cobrinha percorrendo o gráfico de contribuições
       - uses: Platane/snk@v3
         with:
@@ -27,6 +29,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
+          SETTING_JSON: .github/profile-3d/settings.json
 
       - name: Juntar arquivos gerados
         run: mkdir out && cp dist/*.svg profile-3d-contrib/*.svg out/
