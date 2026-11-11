@@ -11,7 +11,7 @@
 
 ## ✦ Sobre mim
 
-<img src="./assets/code.svg" width="100%" alt="class Developer — user: mneabraaolins; role: Python Developer | RPA & Data Specialist; focus: Automação de Processos Robóticos (RPA), Pipelines de Dados & Web Scraping, Dashboards Interativos & Business Intelligence, Integrações de APIs e Sistemas Corporativos" />
+<img src="./assets/code.svg" width="100%" alt="class Developer — user: mneabraaolins; role: Python Developer | RPA & Data; focus: Automação de Processos Robóticos (RPA), Pipelines de Dados & Web Scraping, Dashboards Interativos & Business Intelligence, Integrações de APIs e Sistemas Corporativos" />
 
 <br />
 
