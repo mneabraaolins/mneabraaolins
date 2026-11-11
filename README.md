@@ -1,5 +1,5 @@
 <!-- Banner animado -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:2c5364,100:00c9a7&height=200&section=header&text=Olá,%20eu%20sou%20o%20SEU_NOME&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=38"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:2c5364,100:00c9a7&height=200&section=header&text=Olá,%20eu%20sou%20o%20Abraão Lins&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=38"/>
 
 <!-- Texto digitando -->
 <p align="center">
