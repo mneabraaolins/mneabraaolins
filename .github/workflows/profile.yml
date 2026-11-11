@@ -29,12 +29,12 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
 
       - name: Juntar arquivos gerados
-        run: cp profile-3d-contrib/*.svg dist/
+        run: mkdir out && cp dist/*.svg profile-3d-contrib/*.svg out/
 
       # Publica tudo na branch "output" (não suja o histórico da main)
       - uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
-          build_dir: dist
+          build_dir: out
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
