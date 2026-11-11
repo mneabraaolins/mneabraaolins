@@ -33,7 +33,7 @@
 
 ## ✦ Contribuições
 
-<img src="https://raw.githubusercontent.com/mneabraaolins/mneabraaolins/output/profile-night-rainbow.svg" width="100%" alt="Contribuições em 3D" />
+<img src="https://raw.githubusercontent.com/mneabraaolins/mneabraaolins/output/profile-custom.svg" width="100%" alt="Contribuições em 3D" />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mneabraaolins/mneabraaolins/output/snake-dark.svg" />
