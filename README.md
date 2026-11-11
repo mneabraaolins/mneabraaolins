@@ -29,7 +29,7 @@ class Developer:
         self.focus = [
             "Automação de Processos Robóticos (RPA)",
             "Pipelines de Dados & Web Scraping",
-            "Dashboards Interativos & BI",
+            "Dashboards Interativos & Business Intelligence",
             "Integrações de APIs e Sistemas Corporativos"
         ]
         self.mindset = "Se uma tarefa é repetitiva, ela pode ser automatizada."
