@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 530" width="100%" role="img" aria-label="Classe Python Developer: usuário mneabraaolins, Python Developer, RPA e Data Specialist. Foco em RPA, pipelines de dados e web scraping, dashboards e BI, integrações de APIs.">
+  <style>
+    text { font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; font-size: 15px; fill: #cbd5e1; white-space: pre; }
+    .ln { fill: #475569; text-anchor: end; font-size: 13px; }
+    .k { fill: #fbbf24; }
+    .n { fill: #2dd4bf; }
+    .s { fill: #a7f3d0; }
+    .v { fill: #93c5fd; font-style: italic; }
+    .m { fill: #64748b; }
+    .cover { fill: #0b1220; transform-box: fill-box; transform-origin: right center; transform: scaleX(0); animation: reveal .5s steps(28, end) both; }
+    @keyframes reveal { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+    .cursor { fill: #2dd4bf; animation: blink 1.1s steps(2, jump-none) infinite; }
+    @keyframes blink { from { opacity: 1; } to { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <rect x="0.5" y="0.5" width="899" height="529" rx="14" fill="#0b1220" stroke="#1e293b"/>
+
+  <!-- Barra de título -->
+  <circle cx="26" cy="24" r="6" fill="#f87171"/>
+  <circle cx="46" cy="24" r="6" fill="#fbbf24"/>
+  <circle cx="66" cy="24" r="6" fill="#34d399"/>
+  <text x="450" y="29" text-anchor="middle" class="m" style="font-size:13px">developer.py</text>
+  <line x1="1" y1="46" x2="899" y2="46" stroke="#1e293b"/>
+
+  <!-- Numeração -->
+  <g class="ln">
+    <text class="ln" x="44" y="84">1</text><text class="ln" x="44" y="108">2</text><text class="ln" x="44" y="132">3</text>
+    <text class="ln" x="44" y="156">4</text><text class="ln" x="44" y="180">5</text><text class="ln" x="44" y="204">6</text>
+    <text class="ln" x="44" y="228">7</text><text class="ln" x="44" y="252">8</text><text class="ln" x="44" y="276">9</text>
+    <text class="ln" x="44" y="300">10</text><text class="ln" x="44" y="324">11</text><text class="ln" x="44" y="348">12</text>
+    <text class="ln" x="44" y="372">13</text><text class="ln" x="44" y="396">14</text>
+  </g>
+
+  <!-- Código -->
+  <g xml:space="preserve">
+    <text x="66" y="84"><tspan class="k">class</tspan> <tspan class="n">Developer</tspan>:</text>
+    <text x="66" y="108">    <tspan class="k">def</tspan> <tspan class="n">__init__</tspan>(<tspan class="v">self</tspan>):</text>
+    <text x="66" y="132">        <tspan class="v">self</tspan>.user = <tspan class="s">"mneabraaolins"</tspan></text>
+    <text x="66" y="156">        <tspan class="v">self</tspan>.role = <tspan class="s">"Python Developer | RPA &amp; Data Specialist"</tspan></text>
+    <text x="66" y="180">        <tspan class="v">self</tspan>.focus = [</text>
+    <text x="66" y="204">            <tspan class="s">"Automação de Processos Robóticos (RPA)"</tspan>,</text>
+    <text x="66" y="228">            <tspan class="s">"Pipelines de Dados &amp; Web Scraping"</tspan>,</text>
+    <text x="66" y="252">            <tspan class="s">"Dashboards Interativos &amp; Business Intelligence"</tspan>,</text>
+    <text x="66" y="276">            <tspan class="s">"Integrações de APIs e Sistemas Corporativos"</tspan></text>
+    <text x="66" y="300">        ]</text>
+    <text x="66" y="324">        <tspan class="v">self</tspan>.mindset = <tspan class="s">"Se uma tarefa é repetitiva, ela pode ser automatizada."</tspan></text>
+    <text x="66" y="372">    <tspan class="k">def</tspan> <tspan class="n">say_hi</tspan>(<tspan class="v">self</tspan>):</text>
+    <text x="66" y="396">        <tspan class="n">print</tspan>(<tspan class="s">"Olá! Bem-vindo ao meu espaço de código e automações."</tspan>)</text>
+  </g>
+
+  <!-- Terminal -->
+  <line x1="1" y1="420" x2="899" y2="420" stroke="#1e293b"/>
+  <g xml:space="preserve">
+    <text x="24" y="452"><tspan class="k">$</tspan> python -c <tspan class="s">"from developer import Developer; Developer().say_hi()"</tspan></text>
+    <text x="24" y="478" class="n">Olá! Bem-vindo ao meu espaço de código e automações.</text>
+    <text x="24" y="504" class="k">$</text>
+  </g>
+  <rect class="cursor" x="42" y="490" width="9" height="18"/>
+
+  <!-- Máscaras de digitação (uma por linha) -->
+  <rect class="cover" x="62" y="66" width="830" height="24" style="animation-delay:.5s"/>
+  <rect class="cover" x="62" y="90" width="830" height="24" style="animation-delay:.85s"/>
+  <rect class="cover" x="62" y="114" width="830" height="24" style="animation-delay:1.2s"/>
+  <rect class="cover" x="62" y="138" width="830" height="24" style="animation-delay:1.55s"/>
+  <rect class="cover" x="62" y="162" width="830" height="24" style="animation-delay:1.9s"/>
+  <rect class="cover" x="62" y="186" width="830" height="24" style="animation-delay:2.25s"/>
+  <rect class="cover" x="62" y="210" width="830" height="24" style="animation-delay:2.6s"/>
+  <rect class="cover" x="62" y="234" width="830" height="24" style="animation-delay:2.95s"/>
+  <rect class="cover" x="62" y="258" width="830" height="24" style="animation-delay:3.3s"/>
+  <rect class="cover" x="62" y="282" width="830" height="24" style="animation-delay:3.65s"/>
+  <rect class="cover" x="62" y="306" width="830" height="24" style="animation-delay:4s"/>
+  <rect class="cover" x="62" y="354" width="830" height="24" style="animation-delay:4.5s"/>
+  <rect class="cover" x="62" y="378" width="830" height="24" style="animation-delay:4.85s"/>
+  <rect class="cover" x="16" y="434" width="876" height="24" style="animation-delay:5.9s; animation-duration:1s"/>
+  <rect class="cover" x="16" y="460" width="876" height="24" style="animation-delay:7.3s; animation-duration:.12s"/>
+  <rect class="cover" x="16" y="486" width="876" height="24" style="animation-delay:7.7s; animation-duration:.05s"/>
+</svg>

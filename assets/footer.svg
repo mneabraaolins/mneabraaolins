@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" width="100%" role="img" aria-label="Se uma tarefa é repetitiva, ela pode ser automatizada.">
+  <defs>
+    <linearGradient id="line" gradientUnits="userSpaceOnUse" x1="200" y1="0" x2="1000" y2="0">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text { font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+    .flow { stroke-dasharray: 10 8; animation: flow 1.4s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -36; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .packet { display: none; } }
+  </style>
+  <rect x="0.5" y="0.5" width="1199" height="119" rx="18" fill="#0a0f1c" stroke="#1e293b"/>
+  <text x="600" y="58" text-anchor="middle" font-size="22" fill="#e2e8f0"><tspan fill="#fbbf24">"</tspan>Se uma tarefa é repetitiva, ela pode ser automatizada.<tspan fill="#fbbf24">"</tspan></text>
+  <line class="flow" x1="200" y1="86" x2="1000" y2="86" stroke="url(#line)" stroke-width="2"/>
+  <circle class="packet" r="3.5" cy="86" fill="#fbbf24">
+    <animate attributeName="cx" from="200" to="1000" dur="3.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

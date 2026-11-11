@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" role="img" aria-label="Abraão Lins — Python Developer, RPA e Data Specialist">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0f1c"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fbbf24" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sheen" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="600" y2="0">
+      <stop offset="0" stop-color="#e2e8f0"/>
+      <stop offset="0.42" stop-color="#e2e8f0"/>
+      <stop offset="0.5" stop-color="#2dd4bf"/>
+      <stop offset="0.58" stop-color="#e2e8f0"/>
+      <stop offset="1" stop-color="#e2e8f0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="-420 0" to="420 0" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.15"/>
+      <stop offset="0.55" stop-color="#fff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.4"/>
+    </linearGradient>
+    <mask id="gridMask"><rect width="1200" height="360" fill="url(#fade)"/></mask>
+    <clipPath id="card"><rect width="1200" height="360" rx="18"/></clipPath>
+  </defs>
+
+  <style>
+    text { font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+    .glowA { animation: driftA 14s ease-in-out infinite alternate; }
+    .glowB { animation: driftB 18s ease-in-out infinite alternate; }
+    @keyframes driftA { from { transform: translate(0,0); } to { transform: translate(-90px,40px); } }
+    @keyframes driftB { from { transform: translate(0,0); } to { transform: translate(120px,-30px); } }
+
+    .in { opacity: 0; animation: rise .8s cubic-bezier(.2,.7,.2,1) forwards; }
+    .d1 { animation-delay: .1s; } .d2 { animation-delay: .3s; } .d3 { animation-delay: .55s; }
+    .d4 { animation-delay: .8s; } .d5 { animation-delay: 1.1s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+    .role { opacity: 0; animation: cycle 9s linear infinite; }
+    .r2 { animation-delay: 3s; } .r3 { animation-delay: 6s; }
+    @keyframes cycle { 0% { opacity: 0; transform: translateY(8px); } 4% { opacity: 1; transform: translateY(0); } 29% { opacity: 1; transform: translateY(0); } 33.3% { opacity: 0; transform: translateY(-8px); } 100% { opacity: 0; } }
+
+    .wire { fill: none; stroke: #334155; stroke-width: 1.5; stroke-dasharray: 4 7; animation: flow 1.2s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -22; } }
+
+    .node { fill: #0f172a; stroke: #334155; stroke-width: 1.5; }
+    .core { fill: #0b1f24; stroke: #2dd4bf; stroke-width: 2; }
+    .ring { fill: none; stroke: #2dd4bf; stroke-width: 1.5; transform-box: fill-box; transform-origin: center; animation: pulse 2.6s ease-out infinite; }
+    @keyframes pulse { from { transform: scale(1); opacity: .7; } to { transform: scale(1.35); opacity: 0; } }
+    .led { animation: blink 1.6s steps(2, jump-none) infinite; }
+    @keyframes blink { from { opacity: 1; } to { opacity: .25; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .in { opacity: 1; }
+      .r1 { opacity: 1; }
+      .packet, .ring { display: none; }
+    }
+  </style>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="360" fill="url(#bg)"/>
+    <rect width="1200" height="360" fill="url(#grid)" mask="url(#gridMask)"/>
+    <circle class="glowA" cx="900" cy="140" r="320" fill="url(#glowA)"/>
+    <circle class="glowB" cx="220" cy="330" r="280" fill="url(#glowB)"/>
+
+    <!-- Texto -->
+    <g class="in d1">
+      <circle class="led" cx="70" cy="79" r="5" fill="#2dd4bf"/>
+      <text x="86" y="84" font-size="16" fill="#64748b">~/mneabraaolins</text>
+    </g>
+    <text class="in d2" x="62" y="170" font-size="68" font-weight="700" fill="url(#sheen)" letter-spacing="-1.5">Abraão Lins</text>
+    <g class="in d3" font-size="24">
+      <text x="64" y="222" fill="#fbbf24" font-weight="700">&gt;</text>
+      <text class="role r1" x="94" y="222" fill="#2dd4bf">Python Developer</text>
+      <text class="role r2" x="94" y="222" fill="#2dd4bf">RPA &amp; Data Specialist</text>
+      <text class="role r3" x="94" y="222" fill="#2dd4bf">Automação · Dados · BI</text>
+    </g>
+    <text class="in d4" x="64" y="272" font-size="15" fill="#94a3b8">RPA · Web Scraping · Pipelines de Dados · BI · APIs</text>
+
+    <!-- Pipeline -->
+    <g class="in d5">
+      <path id="w1" class="wire" d="M668 90 C740 90 740 180 800 180"/>
+      <path id="w2" class="wire" d="M668 180 L800 180"/>
+      <path id="w3" class="wire" d="M668 270 C740 270 740 180 800 180"/>
+      <path id="w4" class="wire" d="M900 180 C960 180 950 110 1010 110"/>
+      <path id="w5" class="wire" d="M900 180 C960 180 950 250 1010 250"/>
+
+      <g class="packet">
+        <circle r="4" fill="#fbbf24"><animateMotion dur="2.4s" repeatCount="indefinite" path="M668 90 C740 90 740 180 800 180"/></circle>
+        <circle r="4" fill="#fbbf24"><animateMotion dur="2.4s" begin="0.8s" repeatCount="indefinite" path="M668 180 L800 180"/></circle>
+        <circle r="4" fill="#fbbf24"><animateMotion dur="2.4s" begin="1.6s" repeatCount="indefinite" path="M668 270 C740 270 740 180 800 180"/></circle>
+        <circle r="4" fill="#2dd4bf"><animateMotion dur="2s" begin="0.4s" repeatCount="indefinite" path="M900 180 C960 180 950 110 1010 110"/></circle>
+        <circle r="4" fill="#2dd4bf"><animateMotion dur="2s" begin="1.4s" repeatCount="indefinite" path="M900 180 C960 180 950 250 1010 250"/></circle>
+      </g>
+
+      <g font-size="14" text-anchor="middle" fill="#cbd5e1">
+        <rect class="node" x="580" y="72" width="88" height="36" rx="8"/>
+        <text x="624" y="95">portal</text>
+        <rect class="node" x="580" y="162" width="88" height="36" rx="8"/>
+        <text x="624" y="185">API</text>
+        <rect class="node" x="580" y="252" width="88" height="36" rx="8"/>
+        <text x="624" y="275">SQL</text>
+
+        <rect class="ring" x="800" y="150" width="100" height="60" rx="12"/>
+        <rect class="core" x="800" y="150" width="100" height="60" rx="12"/>
+        <text x="850" y="185" font-size="15" font-weight="700" fill="#2dd4bf">bot.py</text>
+
+        <rect class="node" x="1010" y="88" width="130" height="44" rx="8"/>
+        <text x="1075" y="115">dashboard</text>
+        <rect class="node" x="1010" y="228" width="130" height="44" rx="8"/>
+        <text x="1075" y="255">relatório</text>
+      </g>
+    </g>
+  </g>
+  <rect x="0.5" y="0.5" width="1199" height="359" rx="18" fill="none" stroke="#1e293b"/>
+</svg>
