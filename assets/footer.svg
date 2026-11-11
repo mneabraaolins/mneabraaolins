@@ -1,22 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" width="100%" role="img" aria-label="Se uma tarefa é repetitiva, ela pode ser automatizada.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150" width="100%" role="img" aria-label="Se uma tarefa é repetitiva, ela pode ser automatizada.">
   <defs>
-    <linearGradient id="line" gradientUnits="userSpaceOnUse" x1="200" y1="0" x2="1000" y2="0">
-      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#2dd4bf"/>
-      <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+    <linearGradient id="blade" gradientUnits="userSpaceOnUse" x1="336" y1="0" x2="900" y2="0">
+      <stop offset="0" stop-color="#e5e5e5"/>
+      <stop offset="1" stop-color="#737373"/>
     </linearGradient>
+    <clipPath id="card"><rect width="1200" height="150" rx="18"/></clipPath>
   </defs>
   <style>
     text { font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
-    .flow { stroke-dasharray: 10 8; animation: flow 1.4s linear infinite; }
-    @keyframes flow { to { stroke-dashoffset: -36; } }
-    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .packet { display: none; } }
+    .st { fill: #fff; opacity: .5; animation: tw 3s ease-in-out infinite alternate; }
+    @keyframes tw { from { opacity: .12; } to { opacity: .95; } }
+    .sp { fill: #fff; opacity: .7; transform-box: fill-box; transform-origin: center; animation: spk 4s ease-in-out infinite; }
+    @keyframes spk { 0%, 100% { transform: scale(.25) rotate(0deg); opacity: .15; } 50% { transform: scale(1) rotate(45deg); opacity: 1; } }
+    .glint { animation: glint 4s ease-in-out infinite; }
+    @keyframes glint { 0% { transform: translateX(0); opacity: 0; } 10% { opacity: 1; } 55% { transform: translateX(556px); opacity: 0; } 100% { transform: translateX(556px); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .glint { display: none; } }
   </style>
-  <rect x="0.5" y="0.5" width="1199" height="119" rx="18" fill="#0a0f1c" stroke="#1e293b"/>
-  <text x="600" y="58" text-anchor="middle" font-size="22" fill="#e2e8f0"><tspan fill="#fbbf24">"</tspan>Se uma tarefa é repetitiva, ela pode ser automatizada.<tspan fill="#fbbf24">"</tspan></text>
-  <line class="flow" x1="200" y1="86" x2="1000" y2="86" stroke="url(#line)" stroke-width="2"/>
-  <circle class="packet" r="3.5" cy="86" fill="#fbbf24">
-    <animate attributeName="cx" from="200" to="1000" dur="3.2s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="3.2s" repeatCount="indefinite"/>
-  </circle>
+  <g clip-path="url(#card)">
+    <rect width="1200" height="150" fill="#000"/>
+    <g class="stars">
+    <circle class="st" cx="44" cy="32" r="0.8" style="animation-duration:4.0s;animation-delay:-1.8s"/>
+    <circle class="st" cx="747" cy="37" r="1.5" style="animation-duration:3.8s;animation-delay:-3.8s"/>
+    <circle class="st" cx="1037" cy="56" r="0.6" style="animation-duration:3.7s;animation-delay:-0.1s"/>
+    <circle class="st" cx="1137" cy="139" r="1.2" style="animation-duration:3.7s;animation-delay:-0.9s"/>
+    <circle class="st" cx="243" cy="60" r="0.8" style="animation-duration:4.9s;animation-delay:-5.0s"/>
+    <circle class="st" cx="203" cy="23" r="0.8" style="animation-duration:5.3s;animation-delay:-2.3s"/>
+    <circle class="st" cx="206" cy="91" r="1.0" style="animation-duration:3.6s;animation-delay:-2.6s"/>
+    <circle class="st" cx="888" cy="61" r="1.2" style="animation-duration:3.3s;animation-delay:-3.2s"/>
+    <circle class="st" cx="91" cy="59" r="0.8" style="animation-duration:3.4s;animation-delay:-1.8s"/>
+    <circle class="st" cx="766" cy="111" r="0.8" style="animation-duration:4.1s;animation-delay:-0.5s"/>
+    <circle class="st" cx="39" cy="90" r="0.6" style="animation-duration:4.8s;animation-delay:-3.5s"/>
+    <circle class="st" cx="836" cy="56" r="1.2" style="animation-duration:4.0s;animation-delay:-1.7s"/>
+    <circle class="st" cx="536" cy="79" r="0.6" style="animation-duration:4.6s;animation-delay:-3.9s"/>
+    <circle class="st" cx="838" cy="42" r="0.8" style="animation-duration:5.1s;animation-delay:-3.5s"/>
+    <circle class="st" cx="892" cy="54" r="1.0" style="animation-duration:2.7s;animation-delay:-0.9s"/>
+    <circle class="st" cx="707" cy="85" r="1.0" style="animation-duration:2.4s;animation-delay:-4.4s"/>
+    <circle class="st" cx="109" cy="67" r="0.8" style="animation-duration:5.3s;animation-delay:-3.3s"/>
+    <circle class="st" cx="699" cy="63" r="1.5" style="animation-duration:3.4s;animation-delay:-0.9s"/>
+    <circle class="st" cx="165" cy="107" r="1.2" style="animation-duration:5.5s;animation-delay:-3.2s"/>
+    <circle class="st" cx="252" cy="109" r="1.2" style="animation-duration:2.1s;animation-delay:-3.1s"/>
+    <circle class="st" cx="493" cy="73" r="1.0" style="animation-duration:3.4s;animation-delay:-0.3s"/>
+    <circle class="st" cx="408" cy="104" r="0.6" style="animation-duration:2.3s;animation-delay:-1.3s"/>
+    <circle class="st" cx="706" cy="138" r="1.0" style="animation-duration:5.4s;animation-delay:-2.8s"/>
+    <circle class="st" cx="212" cy="121" r="1.5" style="animation-duration:2.3s;animation-delay:-3.0s"/>
+    <circle class="st" cx="100" cy="106" r="0.8" style="animation-duration:3.4s;animation-delay:-4.9s"/>
+    <circle class="st" cx="1022" cy="22" r="1.0" style="animation-duration:5.3s;animation-delay:-2.1s"/>
+    <circle class="st" cx="1086" cy="110" r="1.2" style="animation-duration:3.1s;animation-delay:-2.7s"/>
+    <circle class="st" cx="997" cy="77" r="1.2" style="animation-duration:5.3s;animation-delay:-3.3s"/>
+    <circle class="st" cx="614" cy="14" r="0.6" style="animation-duration:4.7s;animation-delay:-2.9s"/>
+    <circle class="st" cx="328" cy="112" r="1.5" style="animation-duration:3.4s;animation-delay:-4.5s"/>
+    <circle class="st" cx="822" cy="20" r="1.2" style="animation-duration:5.5s;animation-delay:-4.7s"/>
+    <circle class="st" cx="158" cy="65" r="1.0" style="animation-duration:4.5s;animation-delay:-1.3s"/>
+    <circle class="st" cx="507" cy="19" r="1.2" style="animation-duration:2.3s;animation-delay:-4.1s"/>
+    <circle class="st" cx="967" cy="44" r="0.8" style="animation-duration:4.1s;animation-delay:-0.6s"/>
+    <circle class="st" cx="862" cy="124" r="0.6" style="animation-duration:2.7s;animation-delay:-0.3s"/>
+    <circle class="st" cx="1089" cy="47" r="0.6" style="animation-duration:3.3s;animation-delay:-0.7s"/>
+    <circle class="st" cx="861" cy="124" r="1.2" style="animation-duration:2.9s;animation-delay:-2.9s"/>
+    <circle class="st" cx="867" cy="101" r="1.5" style="animation-duration:3.9s;animation-delay:-5.0s"/>
+    <circle class="st" cx="602" cy="40" r="0.8" style="animation-duration:3.7s;animation-delay:-2.5s"/>
+    <circle class="st" cx="640" cy="137" r="1.2" style="animation-duration:5.0s;animation-delay:-1.4s"/>
+    <circle class="st" cx="1164" cy="56" r="1.5" style="animation-duration:3.0s;animation-delay:-1.2s"/>
+    <circle class="st" cx="517" cy="136" r="1.5" style="animation-duration:5.2s;animation-delay:-4.4s"/>
+    <circle class="st" cx="88" cy="23" r="0.6" style="animation-duration:2.9s;animation-delay:-2.1s"/>
+    <circle class="st" cx="85" cy="34" r="0.8" style="animation-duration:3.9s;animation-delay:-0.4s"/>
+    <circle class="st" cx="185" cy="49" r="1.2" style="animation-duration:2.8s;animation-delay:-4.9s"/>
+    <g transform="translate(1011 75) scale(0.85)"><path class="sp" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7Z" style="animation-duration:4.0s;animation-delay:-2.5s"/></g>
+    <g transform="translate(293 121) scale(1.21)"><path class="sp" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7Z" style="animation-duration:5.4s;animation-delay:-2.2s"/></g>
+    <g transform="translate(456 70) scale(0.90)"><path class="sp" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7Z" style="animation-duration:3.8s;animation-delay:-4.0s"/></g>
+    <g transform="translate(775 33) scale(1.06)"><path class="sp" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7Z" style="animation-duration:6.0s;animation-delay:-1.6s"/></g>
+    </g>
+    <text x="600" y="58" text-anchor="middle" font-size="22" fill="#fafafa"><tspan fill="#f97316">"</tspan>Se uma tarefa é repetitiva, ela pode ser automatizada.<tspan fill="#f97316">"</tspan></text>
+
+    <!-- Katana -->
+    <rect x="246" y="87" width="84" height="8" rx="3" fill="#111" stroke="#3a3a3a"/>
+    <g fill="#f97316" opacity=".75">
+      <path d="M262 88l4 3-4 3-4-3z"/><path d="M278 88l4 3-4 3-4-3z"/><path d="M294 88l4 3-4 3-4-3z"/><path d="M310 88l4 3-4 3-4-3z"/>
+    </g>
+    <rect x="330" y="82" width="5" height="18" rx="2" fill="#a3a3a3"/>
+    <path d="M336 88.5 L880 89 Q896 89.5 902 92.5 L336 93.5 Z" fill="url(#blade)"/>
+    <ellipse class="glint" cx="340" cy="91" rx="14" ry="2.2" fill="#fff"/>
+
+    <text x="40" y="130" font-size="12" fill="#4a4a4a">"Yare yare daze." — Jotaro, JoJo</text>
+    <text x="1160" y="130" font-size="12" fill="#4a4a4a" text-anchor="end">"A admiração é o sentimento mais distante da compreensão." — Aizen, Bleach</text>
+  </g>
+  <rect x="0.5" y="0.5" width="1199" height="149" rx="18" fill="none" stroke="#1f1f1f"/>
 </svg>

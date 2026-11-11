@@ -1,27 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" role="img" aria-label="Abraão Lins — Python Developer, RPA e Data Specialist">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0a0f1c"/>
-      <stop offset="1" stop-color="#0f172a"/>
+      <stop offset="0" stop-color="#000000"/>
+      <stop offset="1" stop-color="#060606"/>
     </linearGradient>
     <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0.22"/>
-      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#fbbf24" stop-opacity="0.12"/>
-      <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+      <stop offset="0" stop-color="#f97316" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#f97316" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="sheen" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="600" y2="0">
-      <stop offset="0" stop-color="#e2e8f0"/>
-      <stop offset="0.42" stop-color="#e2e8f0"/>
-      <stop offset="0.5" stop-color="#2dd4bf"/>
-      <stop offset="0.58" stop-color="#e2e8f0"/>
-      <stop offset="1" stop-color="#e2e8f0"/>
+      <stop offset="0" stop-color="#fafafa"/>
+      <stop offset="0.42" stop-color="#fafafa"/>
+      <stop offset="0.5" stop-color="#f97316"/>
+      <stop offset="0.58" stop-color="#fafafa"/>
+      <stop offset="1" stop-color="#fafafa"/>
       <animateTransform attributeName="gradientTransform" type="translate" from="-420 0" to="420 0" dur="5s" repeatCount="indefinite"/>
     </linearGradient>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width="1"/>
+      <path d="M40 0H0V40" fill="none" stroke="#1f1f1f" stroke-width="1"/>
     </pattern>
     <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#fff" stop-opacity="0.15"/>
@@ -30,6 +30,10 @@
     </linearGradient>
     <mask id="gridMask"><rect width="1200" height="360" fill="url(#fade)"/></mask>
     <clipPath id="card"><rect width="1200" height="360" rx="18"/></clipPath>
+    <linearGradient id="trail" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="110" y2="-36">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
   </defs>
 
   <style>
@@ -48,43 +52,160 @@
     .r2 { animation-delay: 3s; } .r3 { animation-delay: 6s; }
     @keyframes cycle { 0% { opacity: 0; transform: translateY(8px); } 4% { opacity: 1; transform: translateY(0); } 29% { opacity: 1; transform: translateY(0); } 33.3% { opacity: 0; transform: translateY(-8px); } 100% { opacity: 0; } }
 
-    .wire { fill: none; stroke: #334155; stroke-width: 1.5; stroke-dasharray: 4 7; animation: flow 1.2s linear infinite; }
+    .wire { fill: none; stroke: #2e2e2e; stroke-width: 1.5; stroke-dasharray: 4 7; animation: flow 1.2s linear infinite; }
     @keyframes flow { to { stroke-dashoffset: -22; } }
 
-    .node { fill: #0f172a; stroke: #334155; stroke-width: 1.5; }
-    .core { fill: #0b1f24; stroke: #2dd4bf; stroke-width: 2; }
-    .ring { fill: none; stroke: #2dd4bf; stroke-width: 1.5; transform-box: fill-box; transform-origin: center; animation: pulse 2.6s ease-out infinite; }
+    .node { fill: #060606; stroke: #2e2e2e; stroke-width: 1.5; }
+    .core { fill: #0a0a0a; stroke: #fafafa; stroke-width: 2; }
+    .ring { fill: none; stroke: #fafafa; stroke-width: 1.5; transform-box: fill-box; transform-origin: center; animation: pulse 2.6s ease-out infinite; }
     @keyframes pulse { from { transform: scale(1); opacity: .7; } to { transform: scale(1.35); opacity: 0; } }
     .led { animation: blink 1.6s steps(2, jump-none) infinite; }
     @keyframes blink { from { opacity: 1; } to { opacity: .25; } }
+
+    .st { fill: #fff; opacity: .5; animation: tw 3s ease-in-out infinite alternate; }
+    @keyframes tw { from { opacity: .12; } to { opacity: .95; } }
+    .sp { fill: #fff; opacity: .7; transform-box: fill-box; transform-origin: center; animation: spk 4s ease-in-out infinite; }
+    @keyframes spk { 0%, 100% { transform: scale(.25) rotate(0deg); opacity: .15; } 50% { transform: scale(1) rotate(45deg); opacity: 1; } }
+    .shoot { opacity: 0; animation: shoot 9s linear infinite; }
+    @keyframes shoot { 0% { transform: translate(1250px,-30px); opacity: 0; } 2% { opacity: 1; } 13% { transform: translate(380px,260px); opacity: 0; } 100% { transform: translate(380px,260px); opacity: 0; } }
+    .menace { fill: #fff; opacity: .1; animation: menace 3.2s ease-in-out infinite alternate; }
+    @keyframes menace { from { opacity: .05; } to { opacity: .17; } }
 
     @media (prefers-reduced-motion: reduce) {
       * { animation: none !important; }
       .in { opacity: 1; }
       .r1 { opacity: 1; }
-      .packet, .ring { display: none; }
+      .packet, .ring, .shoot { display: none; }
     }
   </style>
 
   <g clip-path="url(#card)">
     <rect width="1200" height="360" fill="url(#bg)"/>
-    <rect width="1200" height="360" fill="url(#grid)" mask="url(#gridMask)"/>
     <circle class="glowA" cx="900" cy="140" r="320" fill="url(#glowA)"/>
     <circle class="glowB" cx="220" cy="330" r="280" fill="url(#glowB)"/>
 
+<g class="stars">
+    <circle class="st" cx="934" cy="294" r="1.0" style="animation-duration:3.6s;animation-delay:-4.3s"/>
+    <circle class="st" cx="396" cy="102" r="1.2" style="animation-duration:3.7s;animation-delay:-3.1s"/>
+    <circle class="st" cx="389" cy="56" r="1.0" style="animation-duration:3.1s;animation-delay:-0.5s"/>
+    <circle class="st" cx="93" cy="312" r="1.0" style="animation-duration:5.4s;animation-delay:-3.3s"/>
+    <circle class="st" cx="330" cy="327" r="0.6" style="animation-duration:4.9s;animation-delay:-0.3s"/>
+    <circle class="st" cx="81" cy="105" r="0.8" style="animation-duration:4.1s;animation-delay:-3.9s"/>
+    <circle class="st" cx="676" cy="233" r="1.2" style="animation-duration:4.9s;animation-delay:-2.6s"/>
+    <circle class="st" cx="610" cy="263" r="0.6" style="animation-duration:4.3s;animation-delay:-2.3s"/>
+    <circle class="st" cx="577" cy="216" r="1.2" style="animation-duration:5.5s;animation-delay:-4.2s"/>
+    <circle class="st" cx="528" cy="169" r="0.8" style="animation-duration:3.8s;animation-delay:-0.1s"/>
+    <circle class="st" cx="1161" cy="63" r="1.0" style="animation-duration:2.4s;animation-delay:-1.5s"/>
+    <circle class="st" cx="144" cy="16" r="1.5" style="animation-duration:2.0s;animation-delay:-1.0s"/>
+    <circle class="st" cx="115" cy="248" r="1.0" style="animation-duration:5.4s;animation-delay:-2.0s"/>
+    <circle class="st" cx="157" cy="297" r="1.5" style="animation-duration:2.7s;animation-delay:-3.4s"/>
+    <circle class="st" cx="697" cy="52" r="0.8" style="animation-duration:3.2s;animation-delay:-4.8s"/>
+    <circle class="st" cx="249" cy="76" r="0.8" style="animation-duration:4.5s;animation-delay:-0.1s"/>
+    <circle class="st" cx="960" cy="257" r="0.8" style="animation-duration:4.4s;animation-delay:-0.9s"/>
+    <circle class="st" cx="1050" cy="105" r="1.5" style="animation-duration:4.7s;animation-delay:-2.1s"/>
+    <circle class="st" cx="793" cy="67" r="1.0" style="animation-duration:3.5s;animation-delay:-1.1s"/>
+    <circle class="st" cx="560" cy="311" r="0.8" style="animation-duration:5.5s;animation-delay:-0.1s"/>
+    <circle class="st" cx="391" cy="209" r="1.2" style="animation-duration:4.2s;animation-delay:-0.5s"/>
+    <circle class="st" cx="307" cy="117" r="1.0" style="animation-duration:2.9s;animation-delay:-3.9s"/>
+    <circle class="st" cx="681" cy="159" r="1.0" style="animation-duration:2.3s;animation-delay:-0.5s"/>
+    <circle class="st" cx="505" cy="15" r="1.2" style="animation-duration:3.3s;animation-delay:-3.1s"/>
+    <circle class="st" cx="268" cy="308" r="1.0" style="animation-duration:4.9s;animation-delay:-0.7s"/>
+    <circle class="st" cx="798" cy="101" r="1.5" style="animation-duration:2.5s;animation-delay:-4.5s"/>
+    <circle class="st" cx="518" cy="105" r="0.8" style="animation-duration:4.6s;animation-delay:-4.7s"/>
+    <circle class="st" cx="410" cy="206" r="1.0" style="animation-duration:4.1s;animation-delay:-2.1s"/>
+    <circle class="st" cx="220" cy="63" r="0.6" style="animation-duration:3.8s;animation-delay:-1.3s"/>
+    <circle class="st" cx="810" cy="139" r="1.0" style="animation-duration:4.9s;animation-delay:-3.0s"/>
+    <circle class="st" cx="608" cy="274" r="0.8" style="animation-duration:5.3s;animation-delay:-4.9s"/>
+    <circle class="st" cx="266" cy="124" r="1.0" style="animation-duration:4.0s;animation-delay:-4.3s"/>
+    <circle class="st" cx="159" cy="151" r="0.8" style="animation-duration:5.2s;animation-delay:-1.0s"/>
+    <circle class="st" cx="41" cy="43" r="0.8" style="animation-duration:3.4s;animation-delay:-1.2s"/>
+    <circle class="st" cx="103" cy="98" r="0.8" style="animation-duration:3.3s;animation-delay:-2.9s"/>
+    <circle class="st" cx="277" cy="55" r="0.8" style="animation-duration:2.5s;animation-delay:-2.3s"/>
+    <circle class="st" cx="685" cy="344" r="1.5" style="animation-duration:4.4s;animation-delay:-2.9s"/>
+    <circle class="st" cx="295" cy="310" r="0.6" style="animation-duration:5.2s;animation-delay:-2.4s"/>
+    <circle class="st" cx="740" cy="167" r="0.6" style="animation-duration:2.1s;animation-delay:-3.2s"/>
+    <circle class="st" cx="995" cy="42" r="1.5" style="animation-duration:3.1s;animation-delay:-0.7s"/>
+    <circle class="st" cx="156" cy="46" r="1.0" style="animation-duration:3.9s;animation-delay:-3.7s"/>
+    <circle class="st" cx="273" cy="182" r="0.8" style="animation-duration:2.3s;animation-delay:-2.4s"/>
+    <circle class="st" cx="167" cy="221" r="0.6" style="animation-duration:5.0s;animation-delay:-2.9s"/>
+    <circle class="st" cx="791" cy="202" r="1.2" style="animation-duration:2.0s;animation-delay:-0.4s"/>
+    <circle class="st" cx="193" cy="335" r="0.6" style="animation-duration:5.5s;animation-delay:-4.4s"/>
+    <circle class="st" cx="684" cy="206" r="1.5" style="animation-duration:4.4s;animation-delay:-2.3s"/>
+    <circle class="st" cx="955" cy="285" r="0.6" style="animation-duration:3.8s;animation-delay:-2.6s"/>
+    <circle class="st" cx="643" cy="315" r="0.6" style="animation-duration:3.7s;animation-delay:-1.2s"/>
+    <circle class="st" cx="239" cy="262" r="1.2" style="animation-duration:4.3s;animation-delay:-2.4s"/>
+    <circle class="st" cx="31" cy="196" r="0.8" style="animation-duration:2.5s;animation-delay:-3.1s"/>
+    <circle class="st" cx="1069" cy="94" r="0.8" style="animation-duration:4.3s;animation-delay:-2.2s"/>
+    <circle class="st" cx="502" cy="175" r="1.0" style="animation-duration:4.3s;animation-delay:-1.0s"/>
+    <circle class="st" cx="890" cy="110" r="0.8" style="animation-duration:3.3s;animation-delay:-2.9s"/>
+    <circle class="st" cx="656" cy="115" r="0.8" style="animation-duration:2.5s;animation-delay:-1.8s"/>
+    <circle class="st" cx="91" cy="40" r="0.8" style="animation-duration:4.9s;animation-delay:-0.6s"/>
+    <circle class="st" cx="973" cy="148" r="0.8" style="animation-duration:4.9s;animation-delay:-1.9s"/>
+    <circle class="st" cx="1072" cy="260" r="1.5" style="animation-duration:3.1s;animation-delay:-4.2s"/>
+    <circle class="st" cx="934" cy="172" r="0.6" style="animation-duration:4.9s;animation-delay:-1.4s"/>
+    <circle class="st" cx="92" cy="151" r="1.2" style="animation-duration:3.2s;animation-delay:-3.2s"/>
+    <circle class="st" cx="1163" cy="17" r="1.5" style="animation-duration:2.5s;animation-delay:-2.3s"/>
+    <circle class="st" cx="58" cy="144" r="0.8" style="animation-duration:4.7s;animation-delay:-4.0s"/>
+    <circle class="st" cx="244" cy="236" r="0.6" style="animation-duration:4.2s;animation-delay:-3.3s"/>
+    <circle class="st" cx="763" cy="47" r="1.5" style="animation-duration:2.7s;animation-delay:-4.1s"/>
+    <circle class="st" cx="532" cy="99" r="1.5" style="animation-duration:2.0s;animation-delay:-2.4s"/>
+    <circle class="st" cx="82" cy="99" r="0.8" style="animation-duration:3.0s;animation-delay:-1.7s"/>
+    <circle class="st" cx="1073" cy="264" r="1.2" style="animation-duration:5.5s;animation-delay:-0.8s"/>
+    <circle class="st" cx="466" cy="52" r="1.0" style="animation-duration:5.3s;animation-delay:-3.6s"/>
+    <circle class="st" cx="274" cy="238" r="1.0" style="animation-duration:2.7s;animation-delay:-4.4s"/>
+    <circle class="st" cx="21" cy="200" r="1.2" style="animation-duration:4.0s;animation-delay:-4.4s"/>
+    <circle class="st" cx="710" cy="245" r="0.8" style="animation-duration:4.3s;animation-delay:-1.0s"/>
+    <circle class="st" cx="260" cy="117" r="0.8" style="animation-duration:5.1s;animation-delay:-4.9s"/>
+    <circle class="st" cx="642" cy="282" r="0.8" style="animation-duration:2.9s;animation-delay:-3.6s"/>
+    <circle class="st" cx="40" cy="186" r="1.2" style="animation-duration:2.3s;animation-delay:-2.2s"/>
+    <circle class="st" cx="1135" cy="223" r="0.8" style="animation-duration:3.7s;animation-delay:-0.1s"/>
+    <circle class="st" cx="139" cy="227" r="0.6" style="animation-duration:2.6s;animation-delay:-1.7s"/>
+    <circle class="st" cx="295" cy="248" r="0.8" style="animation-duration:5.5s;animation-delay:-4.5s"/>
+    <circle class="st" cx="1069" cy="233" r="1.0" style="animation-duration:4.0s;animation-delay:-3.4s"/>
+    <circle class="st" cx="461" cy="232" r="1.2" style="animation-duration:4.0s;animation-delay:-4.2s"/>
+    <circle class="st" cx="1158" cy="335" r="0.8" style="animation-duration:3.8s;animation-delay:-4.2s"/>
+    <circle class="st" cx="1154" cy="139" r="0.8" style="animation-duration:4.3s;animation-delay:-4.8s"/>
+    <circle class="st" cx="434" cy="163" r="0.8" style="animation-duration:5.4s;animation-delay:-2.6s"/>
+    <circle class="st" cx="1181" cy="262" r="0.8" style="animation-duration:3.4s;animation-delay:-0.6s"/>
+    <circle class="st" cx="18" cy="317" r="1.0" style="animation-duration:2.1s;animation-delay:-4.8s"/>
+    <circle class="st" cx="1064" cy="213" r="1.2" style="animation-duration:4.8s;animation-delay:-2.8s"/>
+    <circle class="st" cx="1013" cy="55" r="1.5" style="animation-duration:2.6s;animation-delay:-4.7s"/>
+    <circle class="st" cx="947" cy="219" r="1.0" style="animation-duration:2.9s;animation-delay:-2.4s"/>
+    <circle class="st" cx="268" cy="181" r="1.0" style="animation-duration:5.2s;animation-delay:-4.7s"/>
+    <circle class="st" cx="983" cy="276" r="0.8" style="animation-duration:2.4s;animation-delay:-2.1s"/>
+    <circle class="st" cx="68" cy="141" r="0.8" style="animation-duration:4.5s;animation-delay:-4.9s"/>
+    <circle class="st" cx="80" cy="107" r="0.8" style="animation-duration:2.8s;animation-delay:-3.4s"/>
+    <g transform="translate(679 195) scale(0.77)"><path class="sp" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7Z" style="animation-duration:4.5s;animation-delay:-2.5s"/></g>
+    <g transform="translate(271 275) scale(1.04)"><path class="sp" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7Z" style="animation-duration:5.2s;animation-delay:-3.5s"/></g>
+    <g transform="translate(914 25) scale(0.86)"><path class="sp" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7Z" style="animation-duration:4.2s;animation-delay:-2.6s"/></g>
+    <g transform="translate(347 289) scale(0.74)"><path class="sp" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7Z" style="animation-duration:4.9s;animation-delay:-3.2s"/></g>
+    <g transform="translate(1104 124) scale(1.20)"><path class="sp" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7Z" style="animation-duration:4.8s;animation-delay:-4.3s"/></g>
+    <g transform="translate(496 335) scale(1.17)"><path class="sp" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7Z" style="animation-duration:5.7s;animation-delay:-1.6s"/></g>
+    <g transform="translate(665 113) scale(0.75)"><path class="sp" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7Z" style="animation-duration:6.0s;animation-delay:-4.4s"/></g>
+    <g transform="translate(294 136) scale(0.69)"><path class="sp" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7Z" style="animation-duration:3.3s;animation-delay:-1.9s"/></g>
+    <g transform="translate(910 229) scale(0.98)"><path class="sp" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7Z" style="animation-duration:5.1s;animation-delay:-1.0s"/></g>
+    </g>
+    <g class="shoot"><line x1="0" y1="0" x2="110" y2="-36" stroke="url(#trail)" stroke-width="1.6" stroke-linecap="round"/></g>
+    <g class="shoot" style="animation-delay:4.7s"><g transform="translate(-260 40)"><line x1="0" y1="0" x2="110" y2="-36" stroke="url(#trail)" stroke-width="1.2" stroke-linecap="round"/></g></g>
+
+    <!-- Referências discretas -->
+    <text class="menace" x="940" y="66" font-size="24" font-weight="700" transform="rotate(-8 940 66)">ゴゴゴ</text>
+    <text class="menace" x="700" y="330" font-size="16" font-weight="700" style="animation-delay:-1.6s" transform="rotate(6 700 330)">ゴゴ</text>
+    <text x="850" y="232" font-size="11" text-anchor="middle" fill="#fafafa" opacity=".28">卍解</text>
+
     <!-- Texto -->
     <g class="in d1">
-      <circle class="led" cx="70" cy="79" r="5" fill="#2dd4bf"/>
-      <text x="86" y="84" font-size="16" fill="#64748b">~/mneabraaolins</text>
+      <circle class="led" cx="70" cy="79" r="5" fill="#f97316"/>
+      <text x="86" y="84" font-size="16" fill="#737373">~/mneabraaolins</text>
     </g>
     <text class="in d2" x="62" y="170" font-size="68" font-weight="700" fill="url(#sheen)" letter-spacing="-1.5">Abraão Lins</text>
     <g class="in d3" font-size="24">
-      <text x="64" y="222" fill="#fbbf24" font-weight="700">&gt;</text>
-      <text class="role r1" x="94" y="222" fill="#2dd4bf">Python Developer</text>
-      <text class="role r2" x="94" y="222" fill="#2dd4bf">RPA &amp; Data Specialist</text>
-      <text class="role r3" x="94" y="222" fill="#2dd4bf">Automação · Dados · BI</text>
+      <text x="64" y="222" fill="#f97316" font-weight="700">&gt;</text>
+      <text class="role r1" x="94" y="222" fill="#e5e5e5">Python Developer</text>
+      <text class="role r2" x="94" y="222" fill="#e5e5e5">RPA &amp; Data Specialist</text>
+      <text class="role r3" x="94" y="222" fill="#e5e5e5">Automação · Dados · BI</text>
     </g>
-    <text class="in d4" x="64" y="272" font-size="15" fill="#94a3b8">RPA · Web Scraping · Pipelines de Dados · BI · APIs</text>
+    <text class="in d4" x="64" y="272" font-size="15" fill="#a3a3a3">RPA · Web Scraping · Pipelines de Dados · BI · APIs</text>
 
     <!-- Pipeline -->
     <g class="in d5">
@@ -95,14 +216,14 @@
       <path id="w5" class="wire" d="M900 180 C960 180 950 250 1010 250"/>
 
       <g class="packet">
-        <circle r="4" fill="#fbbf24"><animateMotion dur="2.4s" repeatCount="indefinite" path="M668 90 C740 90 740 180 800 180"/></circle>
-        <circle r="4" fill="#fbbf24"><animateMotion dur="2.4s" begin="0.8s" repeatCount="indefinite" path="M668 180 L800 180"/></circle>
-        <circle r="4" fill="#fbbf24"><animateMotion dur="2.4s" begin="1.6s" repeatCount="indefinite" path="M668 270 C740 270 740 180 800 180"/></circle>
-        <circle r="4" fill="#2dd4bf"><animateMotion dur="2s" begin="0.4s" repeatCount="indefinite" path="M900 180 C960 180 950 110 1010 110"/></circle>
-        <circle r="4" fill="#2dd4bf"><animateMotion dur="2s" begin="1.4s" repeatCount="indefinite" path="M900 180 C960 180 950 250 1010 250"/></circle>
+        <circle r="4" fill="#f97316"><animateMotion dur="2.4s" repeatCount="indefinite" path="M668 90 C740 90 740 180 800 180"/></circle>
+        <circle r="4" fill="#f97316"><animateMotion dur="2.4s" begin="0.8s" repeatCount="indefinite" path="M668 180 L800 180"/></circle>
+        <circle r="4" fill="#f97316"><animateMotion dur="2.4s" begin="1.6s" repeatCount="indefinite" path="M668 270 C740 270 740 180 800 180"/></circle>
+        <circle r="4" fill="#fafafa"><animateMotion dur="2s" begin="0.4s" repeatCount="indefinite" path="M900 180 C960 180 950 110 1010 110"/></circle>
+        <circle r="4" fill="#fafafa"><animateMotion dur="2s" begin="1.4s" repeatCount="indefinite" path="M900 180 C960 180 950 250 1010 250"/></circle>
       </g>
 
-      <g font-size="14" text-anchor="middle" fill="#cbd5e1">
+      <g font-size="14" text-anchor="middle" fill="#d4d4d4">
         <rect class="node" x="580" y="72" width="88" height="36" rx="8"/>
         <text x="624" y="95">portal</text>
         <rect class="node" x="580" y="162" width="88" height="36" rx="8"/>
@@ -112,7 +233,7 @@
 
         <rect class="ring" x="800" y="150" width="100" height="60" rx="12"/>
         <rect class="core" x="800" y="150" width="100" height="60" rx="12"/>
-        <text x="850" y="185" font-size="15" font-weight="700" fill="#2dd4bf">bot.py</text>
+        <text x="850" y="185" font-size="15" font-weight="700" fill="#fafafa">bot.py</text>
 
         <rect class="node" x="1010" y="88" width="130" height="44" rx="8"/>
         <text x="1075" y="115">dashboard</text>
@@ -121,5 +242,5 @@
       </g>
     </g>
   </g>
-  <rect x="0.5" y="0.5" width="1199" height="359" rx="18" fill="none" stroke="#1e293b"/>
+  <rect x="0.5" y="0.5" width="1199" height="359" rx="18" fill="none" stroke="#1f1f1f"/>
 </svg>
