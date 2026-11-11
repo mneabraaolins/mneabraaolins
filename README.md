@@ -26,11 +26,6 @@
 ## Números
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=mneabraaolins&show_icons=true&hide_border=true&bg_color=0a0f1c&title_color=2dd4bf&text_color=cbd5e1&icon_color=fbbf24&ring_color=2dd4bf&locale=pt-br" alt="Estatísticas do GitHub" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mneabraaolins&layout=compact&hide_border=true&bg_color=0a0f1c&title_color=2dd4bf&text_color=cbd5e1&locale=pt-br" alt="Linguagens mais usadas" />
-</p>
-
-<p align="center">
   <img src="https://streak-stats.demolab.com?user=mneabraaolins&hide_border=true&background=0a0f1c&stroke=1e293b&ring=2dd4bf&fire=fbbf24&currStreakNum=e2e8f0&currStreakLabel=2dd4bf&sideNums=e2e8f0&sideLabels=94a3b8&dates=64748b&locale=pt_BR" alt="Sequência de contribuições" />
 </p>
 
